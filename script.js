@@ -36,6 +36,7 @@ function game() {
     let result = "";
     while (playerScore < 5 && computerScore < 5) {
         playerSelection = prompt("rock,paper,scissor");
+        playerSelection = playerSelection.toLowerCase();
         computerSelection = computerPlay();
         result = singleRound(playerSelection, computerSelection);
         if (result == "You win!") {
